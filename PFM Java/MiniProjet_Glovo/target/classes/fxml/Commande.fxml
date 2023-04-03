@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.miniprojet_glovo.CommandeController">
+     <children>
+      <Pane prefHeight="438.0" prefWidth="277.0" style="-fx-background-color: #E1A9A9;">
+         <children>
+            <TextField fx:id="adresse_cmd" layoutX="16.0" layoutY="190.0" prefHeight="59.0" prefWidth="245.0" promptText="entrer adresse" />
+            <Pane layoutY="14.0" prefHeight="59.0" prefWidth="277.0" style="-fx-background-color: #CA8D8D;">
+               <children>
+                  <Label layoutX="6.0" layoutY="7.0" text="Commande">
+                     <font>
+                        <Font name="Calibri" size="39.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cor" layoutX="203.0" layoutY="8.0" prefHeight="45.0" prefWidth="47.0">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Button fx:id="btn_ajouter" layoutX="84.0" layoutY="386.0" mnemonicParsing="false" onAction="#ajouter_cmd" prefHeight="34.0" prefWidth="81.0" text="ajouter" />
+            <Label layoutX="114.0" layoutY="83.0" style="-fx-background-color: white;" />
+            <Label fx:id="msg" layoutX="3.0" layoutY="75.0" prefHeight="28.0" prefWidth="271.0" textFill="#2a9e26">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="34.0" fitWidth="38.0" layoutX="31.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/return.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnReturn" layoutX="22.0" layoutY="386.0" mnemonicParsing="false" onAction="#toReturn" opacity="0.0" prefHeight="45.0" prefWidth="52.0" text="Button" />
+            <Label layoutX="65.0" layoutY="103.0" prefHeight="19.0" prefWidth="151.0" text="Passer une commande ..">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_display" layoutX="57.0" layoutY="154.0" mnemonicParsing="false" onAction="#display_cmd" text="afficher tous les commandes" />
+         </children>
+      </Pane>
+      <Pane layoutX="277.0" prefHeight="438.0" prefWidth="543.0" style="-fx-background-color: #B06B6B;">
+         <children>
+            <TableView fx:id="tableprod" layoutY="72.0" prefHeight="263.0" prefWidth="264.0">
+              <columns>
+                <TableColumn fx:id="tabId" prefWidth="90.0" text="id" />
+                <TableColumn fx:id="tabNom" prefWidth="186.0" text="nom " />
+              </columns>
+            </TableView>
+            <Button fx:id="btn_remplir" layoutX="7.0" layoutY="390.0" mnemonicParsing="false" onAction="#remplir_prod" prefHeight="34.0" prefWidth="107.0" text="ajouter produit" />
+            <Pane layoutY="14.0" prefHeight="59.0" prefWidth="277.0" style="-fx-background-color: #DEC7CC;">
+               <children>
+                  <Label layoutX="43.0" layoutY="18.0" prefHeight="27.0" prefWidth="214.0" text="selectionner les produits">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="btn_vider" layoutX="132.0" layoutY="390.0" mnemonicParsing="false" onAction="#vider_prod" prefHeight="34.0" prefWidth="125.0" text="supprimer produit" />
+            <Pane layoutX="266.0" prefHeight="438.0" prefWidth="286.0" style="-fx-background-color: #E1A9A9;">
+               <children>
+                  <TableView fx:id="tabLiv" layoutY="72.0" prefHeight="263.0" prefWidth="277.0">
+                    <columns>
+                      <TableColumn fx:id="tabNomLiv" prefWidth="94.0" text="Nom " />
+                      <TableColumn fx:id="tabcinLiv" prefWidth="76.0" text="Cin" />
+                        <TableColumn fx:id="tabtelLiv" prefWidth="106.0" text="Telephone" />
+                    </columns>
+                  </TableView>
+                  <Pane layoutY="14.0" prefHeight="59.0" prefWidth="277.0" style="-fx-background-color: #CA8D8D;">
+                     <children>
+                        <Label layoutX="43.0" layoutY="18.0" prefHeight="27.0" prefWidth="214.0" text="selectionner livreur">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

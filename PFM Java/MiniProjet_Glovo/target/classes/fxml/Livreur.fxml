@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="438.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.miniprojet_glovo.LivreurController">
+   <children>
+      <Pane prefHeight="438.0" prefWidth="277.0" style="-fx-background-color: #E1A9A9;">
+         <children>
+            <TextField fx:id="txtNom_liv" layoutX="14.0" layoutY="107.0" prefHeight="59.0" prefWidth="245.0" promptText="entrer nom " />
+            <TextField fx:id="txtTele_liv" layoutX="14.0" layoutY="243.0" prefHeight="59.0" prefWidth="245.0" promptText="entrer telephone" />
+            <TextField fx:id="txtCin_liv" layoutX="14.0" layoutY="174.0" prefHeight="59.0" prefWidth="245.0" promptText="entrer cin" />
+            <Pane layoutY="14.0" prefHeight="59.0" prefWidth="277.0" style="-fx-background-color: #CA8D8D;">
+               <children>
+                  <Label layoutX="81.0" layoutY="5.0" text="Livreur">
+                     <font>
+                        <Font name="Calibri" size="39.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="btnAdd_liv" layoutX="87.0" layoutY="309.0" mnemonicParsing="false" onAction="#ajouter_liv" prefHeight="34.0" prefWidth="81.0" text="ajouter" />
+            <Button fx:id="btnDelete_liv" layoutX="87.0" layoutY="349.0" mnemonicParsing="false" onAction="#supprimer_liv" prefHeight="34.0" prefWidth="81.0" text="supprimer" />
+            <Button fx:id="btnModify_liv" layoutX="87.0" layoutY="390.0" mnemonicParsing="false" onAction="#modifier_liv" prefHeight="34.0" prefWidth="81.0" text="modifier" />
+            <Label fx:id="cor" layoutX="31.0" layoutY="83.0" prefHeight="17.0" prefWidth="193.0" textFill="#29974c" />
+            <ImageView fitHeight="34.0" fitWidth="38.0" layoutX="31.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/return.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnReturn" layoutX="27.0" layoutY="383.0" mnemonicParsing="false" onAction="#toReturn" opacity="0.0" prefHeight="45.0" prefWidth="43.0" style="-fx-background-color: red;" text="Button" />
+         </children>
+      </Pane>
+      <Pane layoutX="277.0" prefHeight="438.0" prefWidth="381.0" style="-fx-background-color: #B06B6B;">
+         <children>
+            <TableView fx:id="tableLiv" prefHeight="438.0" prefWidth="381.0">
+              <columns>
+                <TableColumn fx:id="tabCin" prefWidth="97.0" text="cin" />
+                <TableColumn fx:id="tabNom" prefWidth="124.0" text="nom " />
+                  <TableColumn fx:id="tabTele" prefWidth="159.0" text="telephone" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
